@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import "./custom.css";
+
+@font-face {
+  font-display: swap;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: 500;
+  src: url(/fonts/Helvetica.woff2) format("woff2")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Gloock;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/gloock.ttf) format("truetype");
+}
+
+body{
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  background-color: rgb(244 242 232 / var(--tw-bg-opacity));
+  color: rgb(39 36 36 / var(--tw-text-opacity));
+  font-family: Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: Gloock, serif;
+}
+
+.font-gloock {
+  font-family: Gloock, serif;
+}

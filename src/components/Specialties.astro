@@ -1,0 +1,27 @@
+---
+import SpecialtyCard from "./SpecialtyCard.astro";
+import specialties from "../data/specialties";
+---
+
+<section id="productos">
+  <h2 class="text-5xl font-bold text-center">Especialidades</h2>
+  <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+    {
+      specialties.map((item) => (
+        <SpecialtyCard
+          key={item.id}
+          sku={item.sku}
+          title={item.title}
+          description={item.description}
+          src={item.src}
+          alt={item.alt}
+          priceLabel={item.priceLabel}
+          origin={item.origin}
+          tastingNotes={item.tastingNotes}
+          tags={item.tags}
+          stock={item.stock}
+        />
+      ))
+    }
+  </ul>
+</section>

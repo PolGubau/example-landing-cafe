@@ -1,0 +1,58 @@
+---
+import origins from "../data/origins";
+import specialties from "../data/specialties";
+import copy from "../data/copy";
+---
+
+<section class="w-full max-w-7xl mx-auto px-4 lg:px-0 my-12">
+  <h2 class="text-4xl font-bold text-center mb-6">{copy.origins.title}</h2>
+  <p class="text-center mb-6">{copy.origins.subtitle}</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {
+      origins.map((o) => (
+        <article class="bg-white rounded-lg overflow-hidden shadow flex flex-col">
+          <div class="p-6 flex items-center gap-4">
+            <div class="flex-none w-16 h-16 rounded-full bg-appGray-100 flex items-center text-amber-600 justify-center text-2xl font-bold text-appGray-700">
+              {o.id}
+            </div>
+            <div class="flex-1">
+              <div class="text-sm">{o.country}</div>
+              <h3 class="mt-1 text-2xl lg:text-3xl font-bold">{o.country}</h3>
+              <div class="mt-2 text-sm">{o.description}</div>
+            </div>
+          </div>
+
+          <div class="p-4 border-t border-black/10">
+            <div class="text-sm mb-2">
+              <strong>Variedades:</strong> {o.varieties.join(", ")}
+            </div>
+            <div class="text-sm mb-2">
+              <strong>Regiones:</strong> {o.regions.join(", ")}
+            </div>
+
+            <div class="mt-3">
+              <h4 class="text-sm font-medium">Ejemplos de productos</h4>
+              <ul class="mt-2 text-sm list-disc list-inside">
+                {specialties
+                  .filter((p) => p.origin === o.country)
+                  .slice(0, 3)
+                  .map((p) => (
+                    <li>
+                      {p.title} —{" "}
+                      <span class="text-appText">{p.priceLabel}</span>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+
+            <div class="mt-4">
+              <a class="text-sm bg-appText text-white px-3 py-1 rounded">
+                Ver más
+              </a>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

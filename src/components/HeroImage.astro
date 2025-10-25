@@ -1,0 +1,13 @@
+---
+import { Image } from "astro:assets";
+---
+
+<!-- Hero image positioned absolutely behind header and content -->
+<Image
+  alt={Astro.props.alt ?? "Hero"}
+  class={Astro.props.class ??
+    "inline-block w-full mt-36 rounded-t-[200px] h-[60vh] aspect-video object-cover absolute left-0 top-0 -z-10"}
+  width={Astro.props.width ?? 500}
+  height={Astro.props.height ?? 500}
+  src={Astro.props.src ?? "/images/colombia2.webp"}
+/>

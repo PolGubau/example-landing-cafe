@@ -1,0 +1,28 @@
+---
+import copy from "../data/copy";
+---
+
+<section class="w-full max-w-7xl mx-auto px-4 lg:px-0 my-12">
+  <h2 class="text-3xl font-bold text-center mb-4">{copy.shipping.title}</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="bg-white rounded-lg p-6 shadow-sm">
+      <h3 class="font-semibold">{copy.shipping.shippingTitle}</h3>
+      <p class="mt-2 text-sm">{copy.shipping.shippingText}</p>
+      <ul class="mt-3 text-sm list-disc list-inside">
+        {copy.shipping.shippingBullets.map((b) => <li>{b}</li>)}
+      </ul>
+    </div>
+    <div class="bg-white rounded-lg p-6 shadow-sm">
+      <h3 class="font-semibold">{copy.shipping.faqTitle}</h3>
+      <div class="mt-2 text-sm">
+        {
+          copy.shipping.faqItems.map((item) => (
+            <p class="mt-2">
+              <strong>{item.q}</strong> {item.a}
+            </p>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

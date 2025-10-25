@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+---
+
+<header
+  class="flex items-center justify-center xl:justify-between w-full relative z-10 pb-[65vh]"
+>
+  <p class="text-right max-xl:hidden">
+    <strong>Calle Mayor, 10</strong>
+    <br />
+    <a href="#"> Abrir Mapa </a>
+  </p>
+  <div class="h-px flex-1 bg-[#D9D9D9] mx-4 max-xl:hidden"></div>
+  <div class="bg-white px-4 py-3.5 rounded-full max-w-max lg:px-20 lg:py-14">
+    <div class="flex items-center">
+      <Image
+        src="/images/star.svg"
+        alt="Location icon"
+        class="w-4 h-4 lg:w-12 lg:h-12"
+        width={48}
+        height={48}
+      />
+
+      <h1
+        class="text-5xl sm:text-7xl leading-none font-Gloock mx-2.5 lg:text-[80px] lg:leading-none lg:mx-12 2xl:text-[112px] 2xl:leading-none"
+      >
+        As de Oros
+      </h1>
+      <Image
+        src="/images/star.svg"
+        alt="Location icon"
+        class="w-4 h-4 lg:w-12 lg:h-12"
+        width={48}
+        height={48}
+      />
+    </div>
+  </div>
+  <div class="h-px flex-1 bg-[#D9D9D9] mx-4 max-xl:hidden"></div>
+  <p class="max-xl:hidden">
+    <strong>Abierto 09-21</strong>
+    <br />(Lunes-Sábado)
+  </p>
+</header>
