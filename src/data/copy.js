@@ -28,14 +28,14 @@ export default {
     {
       date: "10 Ene, 2026",
       title: "Cata Online: Especialidades de Invierno",
-      description: "Cata virtual guiada por nuestro equipo. Incluye una caja de muestras (mock) enviada antes del evento."
+      description: "Cata virtual guiada por nuestro equipo. Incluye una caja de muestras enviada antes del evento."
     }
   ],
   shipping: {
     title: "Envíos y preguntas frecuentes",
     shippingTitle: "Envíos",
     shippingText: "Envíos nacionales en 2-4 días hábiles.",
-    shippingBullets: ["Gastos de envío desde 3.50€", "Devoluciones en 14 días (mock)"],
+    shippingBullets: ["Gastos de envío desde 3.50€", "Devoluciones en 14 días", "Empaque sostenible"],
     faqTitle: "FAQ",
     faqItems: [
       { q: "¿Puedo cambiar el origen de mi suscripción?", a: "Sí, puedes seleccionar opciones." },
@@ -56,7 +56,7 @@ export default {
     addressLines: ["Calle Mayor, 10", "08313 Premià de Mar", "España"],
     connectTitle: "Conecta",
     contactTitle: "Contacto",
-    contactItems: ["Tel: (+34) 600 000 000", "Email: hola@cafeyte.mock"],
+    contactItems: ["Tel: (+34) 608 834 567", "Email: hola@asdeoros.mock"],
     shopTitle: "Tienda",
     shopItems: ["Pickup", "Ubicación"],
     legalTitle: "Legal",
